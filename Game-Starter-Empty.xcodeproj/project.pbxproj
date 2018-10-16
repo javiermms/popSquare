@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3E78E121755890001D613D /* boxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E78E021755890001D613D /* boxes.swift */; };
 		D8A7EBED214AA9C30022E043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7EBEC214AA9C30022E043 /* AppDelegate.swift */; };
 		D8A7EBF3214AA9C30022E043 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7EBF2214AA9C30022E043 /* GameScene.swift */; };
 		D8A7EBF5214AA9C30022E043 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7EBF4214AA9C30022E043 /* GameViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB3E78E021755890001D613D /* boxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxes.swift; sourceTree = "<group>"; };
 		D8A7EBE9214AA9C30022E043 /* Game-Starter-Empty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game-Starter-Empty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A7EBEC214AA9C30022E043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8A7EBF2214AA9C30022E043 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				D8A7EBEC214AA9C30022E043 /* AppDelegate.swift */,
 				D8A7EBF2214AA9C30022E043 /* GameScene.swift */,
 				D8A7EBF4214AA9C30022E043 /* GameViewController.swift */,
+				AB3E78E021755890001D613D /* boxes.swift */,
 				D8A7EBF6214AA9C30022E043 /* Main.storyboard */,
 				D8A7EBF9214AA9C40022E043 /* Assets.xcassets */,
 				D8A7EBFB214AA9C40022E043 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				D8A7EBF3214AA9C30022E043 /* GameScene.swift in Sources */,
 				D8A7EBF5214AA9C30022E043 /* GameViewController.swift in Sources */,
 				D8A7EBED214AA9C30022E043 /* AppDelegate.swift in Sources */,
+				AB3E78E121755890001D613D /* boxes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

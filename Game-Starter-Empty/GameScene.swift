@@ -39,22 +39,23 @@ class GameScene: SKScene {
     
     func createSquare(){
         let size = CGSize(width: 60, height: 60)
-        let square = SKSpriteNode(texture: nil, color: .green, size: size)
+        //let square = SKSpriteNode(texture: nil, color: .green, size: size)
+        let box = Boxes(name: "square", color: .green, size: size)
         let randomCGFloat = CGFloat.random(in: 1...view!.bounds.width)
         
         
-        square.position.x = randomCGFloat
-        square.position.y = 0
+        box.position.x = randomCGFloat
+        box.position.y = 0
         
-        let moveUp = SKAction.moveBy(x: 0, y: (view?.bounds.height)!, duration: 1)
+        let moveUp = SKAction.moveBy(x: 0, y: (view?.bounds.height)!, duration: 2)
         let remove = SKAction.removeFromParent()
         let seq = SKAction.sequence([moveUp, remove])
         
        
         
-        addChild(square)
-        square.run(seq)
-        square.name = "square"
+        addChild(box)
+        box.run(seq)
+        //box.name = "square"
     }
     
     
@@ -81,4 +82,5 @@ class GameScene: SKScene {
         
     }
     
+
 }
