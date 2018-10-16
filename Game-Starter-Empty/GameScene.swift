@@ -41,15 +41,26 @@ class GameScene: SKScene {
         let size = CGSize(width: 60, height: 60)
         //let square = SKSpriteNode(texture: nil, color: .green, size: size)
         let box = Boxes(name: "square", color: .green, size: size)
+        
+        
+        
         let randomCGFloat = CGFloat.random(in: 1...view!.bounds.width)
-        
-        
         box.position.x = randomCGFloat
         box.position.y = 0
         
         let moveUp = SKAction.moveBy(x: 0, y: (view?.bounds.height)!, duration: 2)
         let remove = SKAction.removeFromParent()
-        let seq = SKAction.sequence([moveUp, remove])
+        let minusOne = SKAction.run {
+            self.count -= 1
+            self.score.text = "Score \(self.count)"
+            
+            if self.count <= 0 {
+                self.gameOver()
+            }
+            
+        
+        }
+        let seq = SKAction.sequence([moveUp, remove, minusOne])
         
        
         
@@ -68,6 +79,7 @@ class GameScene: SKScene {
                 count += 1
                 score.text = "Score \(count)"
             }
+            
         }
         
     }
@@ -80,6 +92,18 @@ class GameScene: SKScene {
         
         addChild(score)
         
+    }
+    
+    func gameOver() {
+        self.removeAllChildren()
+        let gameOverLabel = SKLabelNode(fontNamed: "AmericanTypewriter")
+        gameOverLabel.fontSize = 30
+        gameOverLabel.text = "GAME OVER"
+        gameOverLabel.fontColor = SKColor.red
+        let screenSize = UIScreen.main.bounds
+        gameOverLabel.position = CGPoint(x:screenSize.width/2 , y: screenSize.height/2)
+        
+        addChild(gameOverLabel)
     }
     
 
